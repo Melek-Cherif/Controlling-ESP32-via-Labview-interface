@@ -1,0 +1,106 @@
+tab config
+0:disable 20,24,28,29,30,31,37,38
+1:no configured
+2:input
+3:output
+
+tab Result
+0:disable
+1:on
+2:off
+
+function substring
+0 = trameOk
+-1 = trameNok
+-2 = function not defined
+-3 = error parameter
+
+function initialization
+function setDisablePin (int pin)
+
+// active outPut
+
+[TX] : SON 1\r\n
+
+[RX] : SON 1 OK\r\n
+
+ 
+
+// desactive outPut
+
+[TX] : SOFF 1\r\n
+
+[RX] : SOFF 1 OK\r\n
+
+ 
+
+// get etat input
+
+[TX] : GSTPIN 1\r\n
+
+[RX] : STPIN 0 OK\r\n
+
+ 
+
+// get etat all input
+
+[TX] : GSTALL 1\r\n
+
+[RX] : STALL 10120002111102 OK\r\n
+
+ 
+
+// set config input at pin 1
+
+[TX] : SCFGIN 1\r\n
+
+[RX] : SCFGIN 1 OK\r\n
+
+ 
+
+// set config output at pin 1
+
+[TX] : SCFGOUT 1\r\n
+
+[TX] : SCFGOUT 1 OK\r\n
+
+ 
+
+// disable pin 1
+
+[TX] : SCFGDIS 1\r\n
+
+[TX] : SCFGDIS 1 OK\r\n
+
+int getAllResultChar (char tabResult[], char messageTabResult[])
+
+{
+
+                int i = 0;
+
+                char str[5] = "";
+
+               
+
+                sprintf (messageTabResult, "GSTALL ");
+
+               
+
+                for (i=0; i<40; i++)
+
+                {
+
+                               sprintf (str, "%c", (tabResult[i]+'0'));
+
+                              
+
+                               strcat (messageTabResult, str);
+
+                }
+
+               
+
+                strcat (messageTabResult, " OK\r\n");
+                return 0;
+
+}
