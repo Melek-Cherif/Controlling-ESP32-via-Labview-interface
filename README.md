@@ -3,7 +3,7 @@ This project consists of introducing the concept of debugging an IoT system thro
 
 This simple diagram shows the working principle of the system:
 <div style="text-align: center;">
-    <img src="https://github.com/Melek-Cherif/Controlling-ESP32-via-Labview-interface/blob/9df12be72fd033860efa85bc56e9109bbd10e24b/project/images/Blank%20diagram.png" alt="Diagram" width="700">
+    <img src="https://github.com/Melek-Cherif/Controlling-ESP32-via-Labview-interface/blob/d2e590a1638bb5cffa556764f0d2ac48977601f9/project/images/Blank%20diagram.png" alt="Diagram" width="700">
 <div>
 
 ## Final result:
