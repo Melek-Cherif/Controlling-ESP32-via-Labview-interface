@@ -7,3 +7,6 @@ This simple diagram shows the working principle of the system:
 <div>
 
 ## Final result:
+<div style="text-align: center;">
+    <img src="" alt="Diagram" width="700">
+<div>
